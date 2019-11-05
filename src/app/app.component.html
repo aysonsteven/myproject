@@ -1,0 +1,37 @@
+    <div id="preloader"></div>
+
+
+    <header class="navbar navbar-inverse navbar-fixed-top " role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="fa fa-bars"></i>
+                </button>
+                 <a class="navbar-brand" routerLink="home" href="javascript:void(0)"><h1><span class="pe-7s-gleam bounce-in"></span> IMPACT</h1></a>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li routerLink="home"><a  href="javascript:void(0)">Home</a></li>
+                    <li routerLink="about"><a  href="javascript:void(0)">About Us</a></li>
+                    <li routerLink="services"><a href="javascript:void(0)">Services</a></li>
+                    <li routerLink="portfolio"><a href="javascript:void(0)">Portfolio</a></li>
+                    <li routerLink="blog"><a href="javascript:void(0)">Blog</a></li>
+                    <li routerLink="contact"><a href="javascript:void(0)">Contact</a></li>
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <i class="icon-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="project-item.html">Project Single</a></li>
+                            <li><a href="blog-item.html">Blog Single</a></li>
+                            <li class="active"><a href="404.html">404</a></li>
+                        </ul>
+                    </li>
+                    <li><span class="search-trigger"><i class="fa fa-search"></i></span></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <router-outlet></router-outlet>
+
+    <footer-template *ngIf="activeRoute!='/page-not-found'"></footer-template>
